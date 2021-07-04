@@ -1,0 +1,907 @@
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~ (master)
+$ pwd
+/c/Users/jeyas
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~ (master)
+$ cd C:/Users/jeyas/Desktop/Assignments
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git init
+Initialized empty Git repository in C:/Users/jeyas/Desktop/Assignments/.git/
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"first file"
+[master (root-commit) 44288a0] first file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch html-assignments
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ alias graph="git log --all --decorate --oneline --graph"
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+* 44288a0 (HEAD -> master, html-assignments) first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+  html-assignments
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout html-assignment
+error: pathspec 'html-assignment' did not match any file(s) known to git
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ touch new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m "second html file"
+[html-assignments a683a01] second html file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ graph
+* a683a01 (HEAD -> html-assignments) second html file
+* 44288a0 (master) first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m"chnage 1"
+[html-assignments c35ab38] chnage 1
+ 1 file changed, 1 insertion(+)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m"change tqo"
+[html-assignments 0012cff] change tqo
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+* 0012cff (html-assignments) change tqo
+* c35ab38 chnage 1
+* a683a01 second html file
+* 44288a0 (HEAD -> master) first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"third change"
+[master 93061cd] third change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m"4th change"
+[html-assignments 078db53] 4th change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git commit -m"fourth change"
+[html-assignments 875eea8] fourth change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ graph
+* 875eea8 (HEAD -> html-assignments) fourth change
+* 078db53 4th change
+* 0012cff change tqo
+* c35ab38 chnage 1
+* a683a01 second html file
+| * 93061cd (master) third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git branch
+* html-assignments
+  master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ graph
+* 875eea8 (HEAD -> html-assignments) fourth change
+* 078db53 4th change
+* 0012cff change tqo
+* c35ab38 chnage 1
+* a683a01 second html file
+| * 93061cd (master) third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git diff master..html-assignments
+diff --git a/README.txt b/README.txt
+index 5fa5a0c..a193c7d 100644
+--- a/README.txt
++++ b/README.txt
+@@ -1,3 +1,4 @@
+ ADA PONGADA
++mudilaya
+
+-enadaaaaaaa
+\ No newline at end of file
++over over
+\ No newline at end of file
+diff --git a/new.html b/new.html
+new file mode 100644
+index 0000000..5791b97
+--- /dev/null
++++ b/new.html
+@@ -0,0 +1,3 @@
++helllo world
++
++nalladhu
+\ No newline at end of file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git merge html-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git checkout html-assignmnets
+error: pathspec 'html-assignmnets' did not match any file(s) known to git
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git checkout html-assignments
+error: you need to resolve your current index first
+README.txt: needs merge
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   new.html
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git commit -m"merge solve"
+[master 55e1657] merge solve
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git merge html-assignments
+Already up to date.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+*   55e1657 (HEAD -> master) merge solve
+|\
+| * 875eea8 (html-assignments) fourth change
+| * 078db53 4th change
+| * 0012cff change tqo
+| * c35ab38 chnage 1
+| * a683a01 second html file
+* | 93061cd third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 875eea8).
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+*   55e1657 (HEAD -> master) merge solve
+|\
+| * 875eea8 fourth change
+| * 078db53 4th change
+| * 0012cff change tqo
+| * c35ab38 chnage 1
+| * a683a01 second html file
+* | 93061cd third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"final commit"
+[master 8cdb975] final commit
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git remote add origin https://github.com/Jai41055/branching.git
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git push -u origin master
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (27/27), 2.28 KiB | 101.00 KiB/s, done.
+Total 27 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Jai41055/branching.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sec1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch css-assignments
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+  css-assignments
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+* 8cdb975 (HEAD -> master, origin/master, css-assignments) final commit
+*   55e1657 merge solve
+|\
+| * 875eea8 fourth change
+| * 078db53 4th change
+| * 0012cff change tqo
+| * c35ab38 chnage 1
+| * a683a01 second html file
+* | 93061cd third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ touch new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git add new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git commit -m" css1"
+[css-assignments 4f1d26b]  css1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git commit -m "css2"
+[css-assignments a58f5e8] css2
+ 1 file changed, 1 insertion(+)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+g
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"css3"
+[master 85fd334] css3
+ 1 file changed, 1 insertion(+)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   new.css
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git commit -m"css4"
+[css-assignments d36dd84] css4
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git add new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git commit -m"css5"
+[css-assignments 1b86f10] css5
+ 1 file changed, 1 insertion(+)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git commit -m"css6"
+[css-assignments 778f511] css6
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git merge css-assignments
+Auto-merging README.txt
+Merge made by the 'recursive' strategy.
+ README.txt | 2 ++
+ new.css    | 1 +
+ new.html   | 3 ++-
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+  css-assignments
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch -d css-assignments
+Deleted branch css-assignments (was 778f511).
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+*   9aebb11 (HEAD -> master) Merge branch 'css-assignments'
+|\
+| * 778f511 css6
+| * 1b86f10 css5
+| * d36dd84 css4
+| * a58f5e8 css2
+| * 4f1d26b  css1
+* | 85fd334 css3
+|/
+* 8cdb975 (origin/master) final commit
+*   55e1657 merge solve
+|\
+| * 875eea8 fourth change
+| * 078db53 4th change
+| * 0012cff change tqo
+| * c35ab38 chnage 1
+| * a683a01 second html file
+* | 93061cd third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git remote add origin https://github.com/Jai41055/css-assignmnets.git
+error: remote origin already exists.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git push
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (21/21), 1.92 KiB | 85.00 KiB/s, done.
+Total 21 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/Jai41055/branching.git
+   8cdb975..9aebb11  master -> master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch js-assignments
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ touch final.js
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add final.js
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"change1"
+[js-assignments 9ee565f] change1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 final.js
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"change 2 on line 1"
+[js-assignments a3586dc] change 2 on line 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"change 3 on line 1"
+[master 8dc44ae] change 3 on line 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git chekout js-assignments
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   final.js
+        modified:   new.css
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git README.txt
+git: 'README.txt' is not a git command. See 'git --help'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"change 5 on text"
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   final.js
+        modified:   new.css
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"change 5 on text"
+[js-assignments 270fab6] change 5 on text
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"chnge6 on html"
+[js-assignments 9e0a036] chnge6 on html
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add new.css
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"chnge 7 on css"
+[js-assignments ce48588] chnge 7 on css
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git add final.js
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git commit -m"chanh7 on js"
+[js-assignments 7f5ad8e] chanh7 on js
+ 1 file changed, 1 insertion(+)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   final.js
+        modified:   new.css
+        modified:   new.html
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git README.txt
+git: 'README.txt' is not a git command. See 'git --help'.
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git commit -m"final merge"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master|MERGING)
+$ git commit -m"final merge"
+[master 42909c9] final merge
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ graph
+*   42909c9 (HEAD -> master) final merge
+|\
+| * 7f5ad8e (js-assignments) chanh7 on js
+| * ce48588 chnge 7 on css
+| * 9e0a036 chnge6 on html
+| * 270fab6 change 5 on text
+| * a3586dc change 2 on line 1
+| * 9ee565f change1
+* | 8dc44ae change 3 on line 1
+|/
+*   9aebb11 (origin/master) Merge branch 'css-assignments'
+|\
+| * 778f511 css6
+| * 1b86f10 css5
+| * d36dd84 css4
+| * a58f5e8 css2
+| * 4f1d26b  css1
+* | 85fd334 css3
+|/
+* 8cdb975 final commit
+*   55e1657 merge solve
+|\
+| * 875eea8 fourth change
+| * 078db53 4th change
+| * 0012cff change tqo
+| * c35ab38 chnage 1
+| * a683a01 second html file
+* | 93061cd third change
+|/
+* 44288a0 first file
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+  js-assignments
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch -d js-assignments
+Deleted branch js-assignments (was 7f5ad8e).
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git branch
+* master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add README.txt
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"final allignment text"
+[master 71cf6bb] final allignment text
+ 1 file changed, 8 deletions(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git add new.html
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git commit -m"final allignment html"
+[master 1de3284] final allignment html
+ 1 file changed, 1 deletion(-)
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git push
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (30/30), 3.09 KiB | 143.00 KiB/s, done.
+Total 30 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/Jai41055/branching.git
+   9aebb11..1de3284  master -> master
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git remote set-url origin https://github.com/Jai41055/the-entire-one.git
+
+Surya@LAPTOP-JTAOS7NS MINGW64 ~/Desktop/Assignments (master)
+$ git push
+Enumerating objects: 76, done.
+Counting objects: 100% (76/76), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (62/62), done.
+Writing objects: 100% (76/76), 7.12 KiB | 331.00 KiB/s, done.
+Total 76 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), done.
+To https://github.com/Jai41055/the-entire-one.git
+ * [new branch]      master -> master
+
+Surya@LAPTOP-JTAOS7N
